@@ -14,6 +14,10 @@
   name = "k8s.io/client-go"
   version = "kubernetes-1.12.6"
 
+[[override]]
+  name = "knative.dev/pkg"
+  branch = "master"
+
 [prune]
   go-tests = true
   unused-packages = true

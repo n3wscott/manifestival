@@ -65,17 +65,6 @@
   version = "v1.1.6"
 
 [[projects]]
-  branch = "master"
-  digest = "1:302f773f42766c56432723f059ec7b18827e78388c326607a6f4ebd67c7ab7d3"
-  name = "github.com/knative/pkg"
-  packages = [
-    "apis",
-    "kmp",
-  ]
-  pruneopts = "UT"
-  revision = "52709ba13d9b77473fe37f2481312a62f63a7d6d"
-
-[[projects]]
   digest = "1:33422d238f147d247752996a26574ac48dcf472976eda7f5134015f06bf16563"
   name = "github.com/modern-go/concurrent"
   packages = ["."]
@@ -289,11 +278,21 @@
   revision = "e531227889390a39d9533dde61f590fe9f4b0035"
   version = "v0.3.0"
 
+[[projects]]
+  branch = "master"
+  digest = "1:3d52af67b722388324decbf95aa4c33c87407662cc562e8842887f11a0c09cc2"
+  name = "knative.dev/pkg"
+  packages = [
+    "apis",
+    "kmp",
+  ]
+  pruneopts = "UT"
+  revision = "972acd413fb96750dc6a4b98e4ba344c594a385b"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
-    "github.com/knative/pkg/apis",
     "k8s.io/apimachinery/pkg/api/equality",
     "k8s.io/apimachinery/pkg/api/errors",
     "k8s.io/apimachinery/pkg/apis/meta/v1",
@@ -302,6 +301,7 @@
     "k8s.io/apimachinery/pkg/util/yaml",
     "k8s.io/client-go/dynamic",
     "k8s.io/klog",
+    "knative.dev/pkg/apis",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
