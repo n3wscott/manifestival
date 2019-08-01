@@ -37,19 +37,6 @@
   version = "v1.3.1"
 
 [[projects]]
-  digest = "1:bf40199583e5143d1472fc34d10d6f4b69d97572142acf343b3e43136da40823"
-  name = "github.com/google/go-cmp"
-  packages = [
-    "cmp",
-    "cmp/internal/diff",
-    "cmp/internal/flags",
-    "cmp/internal/function",
-    "cmp/internal/value",
-  ]
-  pruneopts = "UT"
-  revision = "6f77996f0c42f7b84e5a2b252227263f93432e9b"
-
-[[projects]]
   digest = "1:41bfd4219241b7f7d6e6fdb13fc712576f1337e68e6b895136283b76928fdd66"
   name = "github.com/google/gofuzz"
   packages = ["."]
@@ -189,28 +176,15 @@
   version = "v2.2.2"
 
 [[projects]]
-  digest = "1:1379f00be64af1fd16dff7c4597b4a6d97f672aae94c24c601087a6f6f46e36b"
-  name = "k8s.io/api"
-  packages = [
-    "authentication/v1",
-    "core/v1",
-  ]
-  pruneopts = "UT"
-  revision = "145d52631d00cbfe68490d19ae4f0f501fd31a95"
-  version = "kubernetes-1.12.6"
-
-[[projects]]
-  digest = "1:14426358b37be8f4f35709b180feb7679765e20fdb42d400ec9e2fad807c145a"
+  digest = "1:ff1c892919b6bb5aff29b5f1338f5048e05a9d989994e862f48f1af4f5754b1f"
   name = "k8s.io/apimachinery"
   packages = [
     "pkg/api/equality",
     "pkg/api/errors",
     "pkg/api/meta",
     "pkg/api/resource",
-    "pkg/api/validation",
     "pkg/apis/meta/v1",
     "pkg/apis/meta/v1/unstructured",
-    "pkg/apis/meta/v1/validation",
     "pkg/apis/meta/v1beta1",
     "pkg/conversion",
     "pkg/conversion/queryparams",
@@ -278,30 +252,19 @@
   revision = "e531227889390a39d9533dde61f590fe9f4b0035"
   version = "v0.3.0"
 
-[[projects]]
-  branch = "master"
-  digest = "1:3d52af67b722388324decbf95aa4c33c87407662cc562e8842887f11a0c09cc2"
-  name = "knative.dev/pkg"
-  packages = [
-    "apis",
-    "kmp",
-  ]
-  pruneopts = "UT"
-  revision = "972acd413fb96750dc6a4b98e4ba344c594a385b"
-
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
     "k8s.io/apimachinery/pkg/api/equality",
     "k8s.io/apimachinery/pkg/api/errors",
+    "k8s.io/apimachinery/pkg/api/meta",
     "k8s.io/apimachinery/pkg/apis/meta/v1",
     "k8s.io/apimachinery/pkg/apis/meta/v1/unstructured",
     "k8s.io/apimachinery/pkg/runtime/schema",
     "k8s.io/apimachinery/pkg/util/yaml",
     "k8s.io/client-go/dynamic",
     "k8s.io/klog",
-    "knative.dev/pkg/apis",
   ]
   solver-name = "gps-cdcl"
   solver-version = 1
